@@ -35,6 +35,10 @@ with open("retail_space.csv", "w", newline="") as retail_file:
     for x in datastore["medical"]:
         retail.writerow(x.values())
 
+retail_file.close()
+
+# ------------------------------------------------------------
+
 # retail_file = open("retail_space.csv", "w")
 # retail.writerow(datastore["medical"][0].keys())
 # for i in range(len(datastore["medical"])):

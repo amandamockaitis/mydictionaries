@@ -35,22 +35,24 @@ for school in schools:
             )
 
             print()
-            print()
 
-"""
 for school in schools:
     if school["NCAA"]["NAIA conference number football (IC2020)"] in conf_schools:
         if (
             school[
                 "Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"
             ]
-            > 50000
+            != None
         ):
-            print(f"Name of University: {school['instnm']}")
-            print(
-                f"Total price for in-state students living off campus over $50,000: {school['Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)']}"
-            )
-
-            print()
-            print()
-"""
+            if (
+                school[
+                    "Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"
+                ]
+                > 50000
+            ):
+                print(f"Name of University: {school['instnm']}")
+                print(
+                    f"Total price for in-state students living off campus: {school['Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)']}"
+                )
+                print()
+infile.close()
