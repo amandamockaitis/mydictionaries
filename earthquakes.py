@@ -49,6 +49,7 @@ for quake in mylist:
         eq_dict[quake["id"]]["Magnitude"] = quake["properties"]["mag"]
         eq_dict[quake["id"]]["Longitude"] = quake["geometry"]["coordinates"][0]
         eq_dict[quake["id"]]["Latitude"] = quake["geometry"]["coordinates"][1]
+    print(eq_dict)
 
 
 for x in eq_dict:
